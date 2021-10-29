@@ -27,21 +27,24 @@ import requests
 #     return render(request, "BlackDatabase.html")
 
 
-# def influencers(request):
-#     url = 'https://blackindex.herokuapp.com/featuredpersons'
-#     influencer_data = []
+def influencers(request):
+    url = 'https://blackindex.herokuapp.com/featuredpersons'
+    influencer_data = []
 
-#     influencers = requests.get(url).json()
+    influencers = requests.get(url).json()
 
-#     for influencer in influencers:
-#         influencer_context = {
-#             "name": influencer["first_name"],
-#         }
-#         influencer_data.append(influencer_context)
+    for influencer in influencers:
+        influencer_context = {
+            "name": influencer["first_name"],
+        }
+        influencer_data.append(influencer_context)
 
-#     context = {'influencers': influencer_data}
-#     return render(request, "Influencers.html", context)
+    context = {'influencers': influencer_data}
+    return render(request, "Influencers.html", context)
 
 
 class HomePageView(TemplateView):
     template_name = "BlackDatabase.html"
+
+class Influencers(TemplateView):
+    template_name = "Influencers.html"

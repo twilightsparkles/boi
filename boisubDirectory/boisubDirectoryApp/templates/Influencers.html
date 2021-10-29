@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Influencers</title>
-    <link rel="stylesheet" href="Influencers.css">
+    <link rel="stylesheet" href="{% static 'css/BlackDatabase.css' %}" type="text/css"/>
   </head>
   <body>
 
@@ -26,10 +27,10 @@
               <li class="B"><a href=".html">Books</a></li>
               <li class="C"><a href=".html">Businesses</a></li>
               <li class="D"><a href=".html">Business Owners</a></li>
-              <li class="E"><a href=".html">Influencers</a></li>
+              <li class="E"><a href="/featuredpersons/">Influencers</a></li>
               <li class="F"><a href=".html">Non-Profits</a></li>
             </ul><hr>
-            <a href="BlackDatabase.html">Home Page</a><br><br>
+            <a href="{% url 'home' %}">Home Page</a><br><br>
             <a href="">Contact Us</a>
           </nav>
         </div>
@@ -37,39 +38,13 @@
 
 
       <div class="heroBlockContainer">
-        <div class="heroRow1">
-          <div class="heroBlock1">
-            <a href=""><img class="authors" src="images/authors.jpeg" alt="Authors"></a><hr class="hb">
-            <h4>AUTHORS</h4>
-          </div>
-
-          <div class="heroBlock1">
-            <a href=""><img class="books" src="images/books.png" alt="Books"></a><hr class="hb">
-            <h4>BOOKS</h4>
-          </div>
-
-          <div class="heroBlock1">
-            <a href=""><img class="influencers" src="images/influencers.jpeg" alt="Influencers"></a><hr class="hb">
-            <h4>INFLUENCERS</h4>
-          </div>
+        {% for influencer in influencers %}
+        <div class="heroBlock1">
+          {% static "images/influencers.jpeg" as myphoto %}
+          <a href="{% url 'influencers' %}"><img class="influencers" src="{{ myphoto }}" alt="Influencers"></a><hr class="hb">
+          <h4>{{influencer.name}}</h4>
         </div>
-
-        <div class="heroRow2">
-          <div class="heroBlock2">
-            <a href=""><img class="businesses" src="images/businesses.jpeg" alt="Businesses"></a><hr class="hb">
-            <h4>BUSINESSES</h4>
-          </div>
-
-          <div class="heroBlock2">
-            <a href=""><img class="businessOwners" src="images/businessowners.jpeg" alt="Businesses Owners"></a><hr class="hb">
-            <h4>BUSINESS OWNERS</h4>
-          </div>
-
-          <div class="heroBlock2">
-            <a href=""><img class="nonProfits" src="images/nonprofits.jpeg" alt="Non-Profits"></a><hr class="hb">
-            <h4>NON-PROFITS</h4>
-          </div>
-        </div>
+        {% endfor %}
       </div>
 
     </div>

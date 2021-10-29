@@ -72,7 +72,6 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .heroBlockContainer {
-  border: 1.3px solid red;
   width: 75.5%;
   height: 80%;
   margin-left: 14%;
@@ -98,11 +97,8 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .authors, .books, .influencers, .businesses, .businessOwners, .nonProfits, :last-child > img {
-  border: 1.3px solid blue;
-  width: 250px;
-  height:250px;
-  display: flexbox;
-  position: absolute;
+  width: 99%;
+  height: 80%;
 }
 
 hr.hb {
