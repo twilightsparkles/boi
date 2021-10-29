@@ -3,7 +3,9 @@ from boisubDirectoryApp import views
 from django.urls import path
 
 urlpatterns = [
-    path('', views.index)
+    # path('', views.index)
+    path('', views.home_page)
+    # path('', views.influencers)
     # url(r'authors/([0-9]+)$', views.authorsAPI ),
     # url(r'^books$', views.booksAPI),
     # url(r'^books/([0-9]+)$', views.booksAPI ),
