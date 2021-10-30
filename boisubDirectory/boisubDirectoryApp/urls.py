@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^$', views.HomeView.as_view(), name='home'),
     url(r'^$', views.ServiceView.as_view(), name='services'),
     url(r'^$', views.FoodView.as_view(), name='food'),
+    url(r'^$', views.BusinessOwnersView.as_view(), name='businessowners'),
     url(r'^business$', views.BusinessView.as_view(), name='business'),
     path('featuredpersons/', views.influencers),
     path('books/', views.books),
@@ -22,5 +23,6 @@ urlpatterns = [
     path('businesses/health', views.health),
     path('businesses/home', views.homeDecor),
     path('businesses/services', views.services),
-    path('businesses/food', views.food)
+    path('businesses/food', views.food),
+    path('businessowners', views.businessOwners)
     ]

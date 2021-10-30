@@ -37,17 +37,11 @@
               </nav>
             </div>
           </div>
-      </div>
 
 
       <div class="heroBlockContainer1">
         {% for business in businesses %}
         <div class="column" style="">
-            <a href="{{business.website_link}}">
-                <img src="{{business.image_url}}" alt="beelove logo" style="width:200px;height:200px;">
-                </a>
-                <br>
-                <br>
         <p>{{business.name}}</p>
           <p>{{ business.description}}</p>
         </div>

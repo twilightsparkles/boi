@@ -167,6 +167,22 @@ def services(request):
     context = {'businesses': data}
     return render(request, "services.html", context)
 
+def businessOwners(request):
+    url = 'https://blackindex.herokuapp.com/businessowners'
+    data = []
+
+    models = requests.get(url).json()
+
+    for model in models:
+        model_context = {
+            "name": model["first_name"] +  model["last_name"],
+            "description": model["biography"],
+        }
+        data.append(model_context)
+
+    context = {'businesses': data}
+    return render(request, "businessowners.html", context)
+
 class HomePageView(TemplateView):
     template_name = "BlackDatabase.html"
 
@@ -200,3 +216,5 @@ class ServiceView(TemplateView):
 class FoodView(TemplateView):
     template_name = "food.html"
 
+class BusinessOwnersView(TemplateView):
+    template_name = "businessowners.html"

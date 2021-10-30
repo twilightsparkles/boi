@@ -13,7 +13,7 @@
       <div class="leftHandColumn">
         <div class="searchContainer">
           <form class="form" action="/" method="GET">
-            <input class="searchField" type="search" placeholder="Search">
+            <input class="searchField" type="search" placeholder="Search" name="searchbatext">
             <button class="searchButton" type="submit">
               {% static "images/search.png" as myphoto %}
               <img class="buttonImage" src="{{ myphoto }}"></button>
@@ -26,12 +26,12 @@
             <ul style="list-style-type:none">
               <li class="A"><a href="/authors/">Authors</a></li>
               <li class="B"><a href="/books/">Books</a></li>
-              <li class="C"><a href="">Businesses</a></li>
-              <li class="D"><a href="">Business Owners</a></li>
+              <li class="C"><a href="{% url 'business' %}">Businesses</a></li>
+              <li class="D"><a href="/businessowners/">Business Owners</a></li>
               <li class="E"><a href="/featuredpersons/">Influencers</a></li>
               <li class="F"><a href="">Non-Profits</a></li>
             </ul><hr>
-            <a href="{% url 'home' %}">Home Page</a><br><br>
+            <a href="BlackDatabase.html">Home Page</a><br><br>
             <a href="">Contact Us</a>
           </nav>
         </div>
