@@ -1,0 +1,42 @@
+.hide2 {
+  display: none;
+}
+
+.links {
+  color: darkgray;
+  text-decoration: none;
+
+}
+
+.links:hover {
+  color: lightgray;
+}
+
+
+.FATDIV {
+  background-color: transparent;
+  width: 50%;
+  height: 50%;
+  color: transparent;
+  overflow-wrap: break-word;
+  padding: 4px;
+}
+
+.FATDIV > img {
+  padding-left: 25%;
+  width: 50%;
+  height: 50%;
+}
+
+
+.FATDIV:active {
+  color: lightgreen;
+  background-color: black;
+
+}
+
+.FATDIV:hover {
+  color: lightgreen;
+  background-color: black;
+
+}
