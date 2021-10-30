@@ -13,7 +13,8 @@ def influencers(request):
     for influencer in influencers:
         influencer_context = {
             "name": influencer["first_name"],
-            "website_link": influencer["website_link"]
+            "website_link": influencer["website_link"],
+            "image_url": influencer["image_url"]
         }
         influencer_data.append(influencer_context)
 
@@ -198,3 +199,4 @@ class ServiceView(TemplateView):
 
 class FoodView(TemplateView):
     template_name = "food.html"
+
