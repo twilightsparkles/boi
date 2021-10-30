@@ -47,13 +47,6 @@ body{
     font : 16px "verdana", monospace;
   }
   
-  .books-window{
-    height:580px;
-    margin-left:23%;
-    margin-right:10px;
-    margin-top: -400px;
-  }
-  
   .authors-window{
     height:580px;
     margin-left:23%;

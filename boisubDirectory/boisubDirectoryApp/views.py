@@ -33,6 +33,7 @@ def influencers(request):
     for influencer in influencers:
         influencer_context = {
             "name": influencer["first_name"],
+            "website_link": influencer["website_link"]
         }
         influencer_data.append(influencer_context)
 
