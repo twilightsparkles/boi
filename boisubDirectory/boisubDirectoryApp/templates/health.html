@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Influencers</title>
     <link rel="stylesheet" href="{% static 'css/BlackDatabase.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'css/business.css' %}" type="text/css"/>
   </head>
   <body>
 
@@ -37,12 +38,16 @@
         </div>
       </div>
 
-
-      <div class="heroBlockContainer">
-        {% for influencer in influencers %}
-        <div class="heroBlock1">
-          <a href="{{influencer.website_link}}"><img class="influencers" src="{{ influencer.image_url }}" alt="Influencers"></a><hr class="hb">
-          <h4>{{influencer.name}}</h4>
+      <div class="heroBlockContainer1">
+        {% for business in businesses %}
+        <div class="column">
+            <a href="{{business.website_link}}">
+                <img src="{{business.image_url}}" alt="beelove logo" style="width:200px;height:200px;">
+                </a>
+                <br>
+                <br>
+        <p>{{business.name}}</p>
+          <p>{{ business.description}}</p>
         </div>
         {% endfor %}
       </div>
