@@ -45,11 +45,11 @@
 <div id="buisnessShow">
   <div class="col-sm-9 form-floating me-9">
     <form action="/action_page.php" method="post">
-            <input type="text" id="floatingInput" class="form-control mb-3" placeholder="Business Name"></input>
-<label for="floatingInput">Business Name</label>
+            <input type="text" id="floatingInput" required class="form-control mb-3" placeholder="Business Name"></input>
+
           <div class="input-group form-floating">
 
-        <span class="input-group-text" id="basic-addon3">https://</span><input type="text" class="form-control" id="floatingURL" aria-label="Website Link"  placeholder="Buisness Webaddress">
+        <span class="input-group-text" id="basic-addon3">https://</span><input type="text" required class="form-control" id="floatingURL" aria-label="Website Link"  placeholder="Buisness Webaddress" required>
 
         <button class="btn btn-outline-secondary form-floating dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">#Tags</button>
         <ul class="dropdown-menu dropdown-menu-end">
@@ -68,14 +68,14 @@
 <div id="bookShow" class="hide2">
   <div class="col-sm-9 me-9 form-floating">
     <form action="/action_page.php" method="post">
-<input type="text" class="form-control mb-3"  id="bookName" placeholder="Book Name"></input>
-<label for="bookName">Book Title</label>
-<div class="form-floating">
-<input type="text" class="form-control mb-3" id="authorName" placeholder="Author Name"></input>
-<label for="authorName">Author Name</label></div>
+<input type="text" class="form-control mb-3"  id="bookName" required placeholder="Book Name"></input>
+
+<div class="">
+<input type="text" class="form-control mb-3" id="authorName" required placeholder="Author Name"></input>
+</div>
 <div class="input-group form-floating">
 
-<span class="input-group-text" id="basic-addon3">https://</span> <input type="text" class="form-control" aria-label="Website Link"  placeholder="Buisness Webaddress">
+<span class="input-group-text" id="basic-addon3">https://</span> <input type="text" class="form-control" aria-label="Website Link"  placeholder="Buisness Webaddress" required>
 <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">#Tags</button>
 <ul class="dropdown-menu dropdown-menu-end">
 <li><a class="dropdown-item" href="#">Tag</a></li>
