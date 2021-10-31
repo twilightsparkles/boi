@@ -41,8 +41,7 @@
       <div class="heroBlockContainer">
         {% for influencer in influencers %}
         <div class="heroBlock1">
-          {% static "images/influencers.jpeg" as myphoto %}
-          <a href="{% url 'influencers' %}"><img class="influencers" src="{{ myphoto }}" alt="Influencers"></a><hr class="hb">
+          <a href="{{influencer.website_link}}"><img class="influencers" src="{{ influencer.image_url }}" alt="Influencers"></a><hr class="hb">
           <h4>{{influencer.name}}</h4>
         </div>
         {% endfor %}
