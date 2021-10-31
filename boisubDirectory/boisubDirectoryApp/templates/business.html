@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Black Database</title>
+    <link rel="stylesheet" href="{% static 'css/BlackDatabase.css' %}" type="text/css"/>
+  </head>
+  <body>
+    <div class="layout">
+        <div class="leftHandColumn">
+          <div class="searchContainer">
+            <form class="form" action="/" method="GET">
+              <input class="searchField" type="search" placeholder="Search" name="searchbatext">
+              <button class="searchButton" type="submit">
+                {% static "images/search.png" as myphoto %}
+                <img class="buttonImage" src="{{ myphoto }}"></button>
+            </form>
+          </div>
+
+          <div class="categoriesContainer">
+            <div class="categoriesTitle"><h4>CATEGORIES</h4></div><hr>
+            <nav>
+              <ul style="list-style-type:none">
+                <li class="A"><a href="/authors/">Authors</a></li>
+                <li class="B"><a href="/books/">Books</a></li>
+                <li class="C"><a href="{% url 'business' %}">Businesses</a></li>
+                <li class="D"><a href="/businessowners/">Business Owners</a></li>
+                <li class="E"><a href="/featuredpersons/">Influencers</a></li>
+                <li class="F"><a href="">Non-Profits</a></li>
+              </ul><hr>
+              <a href="{% url 'home' %}">Home Page</a><br><br>
+              <a href="{% url 'forms' %}">Contact Us</a>
+            </nav>
+          </div>
+        </div>
+
+
+      <div class="heroBlockContainer">
+        <div class="heroRow1">
+          <div class="heroBlock1">
+            {% static "images/beauty.jpg" as myphoto %}
+            <a href="/businesses/beauty"><img class="authors" src="{{ myphoto }}" alt="Authors"></a><hr class="hb">
+            <h4>BEAUTY</h4>
+          </div>
+
+          <div class="heroBlock1">
+            {% static "images/fashion.jpg" as myphoto %}
+            <a href="/businesses/fashion"><img class="books" src="{{ myphoto }}" alt="Books"></a><hr class="hb">
+            <h4>FASHION</h4>
+          </div>
+
+          <div class="heroBlock1">
+            {% static "images/healthy.jpg" as myphoto %}
+            <a href="/businesses/health"><img class="influencers" src="{{ myphoto }}" alt="Influencers"></a><hr class="hb">
+            <h4>HEALTH AND WELLNESS</h4>
+          </div>
+        </div>
+
+        <div class="heroRow2">
+          <div class="heroBlock2">
+            {% static "images/food.jpg"  as myphoto %}
+            <a href="/businesses/food"><img class="businesses" src="{{ myphoto }}"  alt="Businesses"></a><hr class="hb">
+            <h4>FOOD AND DRINK</h4>
+          </div>
+
+          <div class="heroBlock2">
+            {% static "images/home.jpg" as myphoto %} 
+            <a href="/businesses/homedecor"><img class="businessOwners" src="{{ myphoto }}" alt="Businesses Owners"></a><hr class="hb">
+            <h4>HOME DECOR AND GIFTS</h4>
+          </div>
+
+          <div class="heroBlock2">
+            {% static "images/service.jpg" as myphoto %}
+            <a href="/businesses/services"><img class="nonProfits" src="{{ myphoto }}" alt="Non-Profits"></a><hr class="hb">
+            <h4>SERVICES</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

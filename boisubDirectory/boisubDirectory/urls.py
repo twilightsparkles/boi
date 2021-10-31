@@ -19,5 +19,5 @@ from  django.conf.urls import url, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('boisubDirectoryApp.urls'))
+    url(r'^', include('boisubDirectoryApp.urls')),
 ]
