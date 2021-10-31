@@ -3,8 +3,12 @@ body{
     margin-left: 3%;
     margin-right: 3%;
   }
-  
-  form.search_bk input[type=text] {
+
+.navmenu{
+float:left;
+}
+
+form.search_bk input[type=text] {
     padding: 5px;
     font-size: 17px;
     border: 1px solid grey;
@@ -12,9 +16,9 @@ body{
     width: 70%;
     background: white;
     margin-left: 2%;
-  }
-  
-  form.search_bk button {
+}
+
+form.search_bk button {
     float: left;
     width: 15%;
     padding: 5px;
@@ -24,19 +28,19 @@ body{
     border: 1px solid grey;
     border-left: none;
     cursor: pointer;
-  }
-  
-  form.search_bk button:hover {
+}
+
+form.search_bk button:hover {
     background: black;
-  }
-  
-  form.search_bk::after {
+}
+
+form.search_bk::after {
     content: "";
     clear: both;
     display: table;
-  }
-  
-  .buttonMain {
+}
+
+.buttonMain {
     text-decoration: none;
     color: grey;
     padding-left: 16px;
@@ -44,20 +48,13 @@ body{
     padding-top: 16px;
     padding-bottom: 16px;
     text-align: justify;
-    font : 16px "verdana", monospace;
-  }
-  
-  .authors-window{
-    height:580px;
-    margin-left:23%;
-    margin-right:10px;
-    margin-top: 2%;
-  }
-  
+    font : 16px "verdana", sans-serif;
+}
+
+
   .style_books{
     float: left;
     margin-right: 3.1%;
     width: 29.8%;
     height: 60%;
-  }
-  
+}
