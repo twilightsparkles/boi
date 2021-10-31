@@ -10,16 +10,6 @@
 
     <div class="layout">
 
-      <div class="leftHandColumn">
-        <div class="searchContainer">
-          <form class="form" action="/" method="GET">
-            <input class="searchField" type="search" placeholder="Search">
-            <button class="searchButton" type="submit">
-              {% static "images/search.png" as myphoto %}
-              <img class="buttonImage" src="{{ myphoto }}"></button>
-          </form>
-        </div>
-
         <div class="leftHandColumn">
           <div class="searchContainer">
             <form class="form" action="/" method="GET">
@@ -29,7 +19,7 @@
                 <img class="buttonImage" src="{{ myphoto }}"></button>
             </form>
           </div>
-  
+
           <div class="categoriesContainer">
             <div class="categoriesTitle"><h4>CATEGORIES</h4></div><hr>
             <nav>
@@ -71,19 +61,19 @@
 
         <div class="heroRow2">
           <div class="heroBlock2">
-            {% static "images/food.jpg"  as myphoto %} 
+            {% static "images/food.jpg"  as myphoto %}
             <a href="/businesses/food"><img class="businesses" src="{{ myphoto }}"  alt="Businesses"></a><hr class="hb">
             <h4>FOOD AND DRINK</h4>
           </div>
 
           <div class="heroBlock2">
-            {% static "images/home.jpg" as myphoto %} 
+            {% static "images/home.jpg" as myphoto %}
             <a href="/businesses/home"><img class="businessOwners" src="{{ myphoto }}" alt="Businesses Owners"></a><hr class="hb">
             <h4>HOME DECOR AND GIFTS</h4>
           </div>
 
           <div class="heroBlock2">
-            {% static "images/service.jpg" as myphoto %} 
+            {% static "images/service.jpg" as myphoto %}
             <a href="/businesses/services"><img class="nonProfits" src="{{ myphoto }}" alt="Non-Profits"></a><hr class="hb">
             <h4>SERVICES</h4>
           </div>
