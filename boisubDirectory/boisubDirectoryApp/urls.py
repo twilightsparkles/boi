@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^$', views.FoodView.as_view(), name='food'),
     url(r'^$', views.BusinessOwnersView.as_view(), name='businessowners'),
     url(r'^business$', views.BusinessView.as_view(), name='business'),
+    url(r'^forms/$', views.FormView.as_view(), name='forms'),
     path('featuredpersons/', views.influencers),
     path('books/', views.books),
     path('authors/', views.authors),
@@ -24,5 +25,6 @@ urlpatterns = [
     path('businesses/homedecor', views.homeDecor),
     path('businesses/services', views.services),
     path('businesses/food', views.food),
-    path('businessowners/', views.businessOwners)
+    path('businessowners/', views.businessOwners),
+    path('forms/', views.postBook)
     ]

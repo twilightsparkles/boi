@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -21,15 +22,15 @@
 <br>
   <h6>CATEGORIES</h6>
   <hr>
-  <a href="authors.html" class="links">Authors </a><br>
-    <a href="authors.html" class="links">Books </a><br>
-  <a href="authors.html" class="links">  Businesses </a><br>
-  <a href="authors.html" class="links">  Business Owners </a><br>
-    <a href="authors.html" class="links">Influencers </a><br>
-    <a href="authors.html" class="links">Non-Profits</a>
+  <a href="/authors/" class="links">Authors </a><br>
+    <a href="/books/" class="links">Books </a><br>
+  <a href="{% url 'business' %}" class="links">  Businesses </a><br>
+  <a href="/businessowners/" class="links">  Business Owners </a><br>
+    <a href="/featuredpersons/" class="links">Influencers </a><br>
+    <a href=".html" class="links">Non-Profits</a>
   <hr>
-    <a href="authors.html" class="links">Home Page </a><br>
-    <a href="authors.html" class="links">Contact Us</a>
+    <a href="{% url 'home' %}" class="links">Home Page </a><br>
+    <a href="{% url 'forms' %}" class="links">Contact Us</a>
 
 </div>
   </div>
@@ -45,17 +46,20 @@
 <div id="buisnessShow">
   <div class="col-sm-9 form-floating me-9">
     <form action="/action_page.php" method="post">
-            <input type="text" id="floatingInput" required class="form-control mb-3" placeholder="Business Name"></input>
+            <input type="text" id="floatingInput" required class="form-control mb-3" placeholder="Business Name" name="business_name"></input>
 
           <div class="input-group form-floating">
 
-        <span class="input-group-text" id="basic-addon3">https://</span><input type="text" required class="form-control" id="floatingURL" aria-label="Website Link"  placeholder="Buisness Webaddress" required>
+        <span class="input-group-text" id="basic-addon3">Website Link</span><input type="text" required class="form-control" id="floatingURL" aria-label="Website Link"  placeholder="Buisness Webaddress" required>
 
         <button class="btn btn-outline-secondary form-floating dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">#Tags</button>
         <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#">Tag</a></li>
-          <li><a class="dropdown-item" href="#">Tag 2</a></li>
-          <li><a class="dropdown-item" href="#">Tag 3</a></li>
+          <li><a class="dropdown-item" href="#">FOOD AND DRINK</a></li>
+          <li><a class="dropdown-item" href="#">BEAUTY</a></li>
+          <li><a class="dropdown-item" href="#">FASHION</a></li>
+          <li><a class="dropdown-item" href="#">SERVICES</a></li>
+          <li><a class="dropdown-item" href="#">HOME DECOR AND GIFTS</a></li>
+          <li><a class="dropdown-item" href="#">HEALTH AND WELLNESS</a></li>
         </ul>
 
       </div>
@@ -75,12 +79,13 @@
 </div>
 <div class="input-group form-floating">
 
-<span class="input-group-text" id="basic-addon3">https://</span> <input type="text" class="form-control" aria-label="Website Link"  placeholder="Buisness Webaddress" required>
+<span class="input-group-text" id="basic-addon3">Website Link</span> <input type="text" class="form-control" aria-label="Website Link"  placeholder="Buisness Webaddress" required>
 <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">#Tags</button>
 <ul class="dropdown-menu dropdown-menu-end">
-<li><a class="dropdown-item" href="#">Tag</a></li>
-<li><a class="dropdown-item" href="#">Tag 2</a></li>
-<li><a class="dropdown-item" href="#">Tag 3</a></li>
+<li><a class="dropdown-item" href="#">MOTIVATIONAL</a></li>
+<li><a class="dropdown-item" href="#">CHILDREN</a></li>
+<li><a class="dropdown-item" href="#">FICTION</a></li>
+<li><a class="dropdown-item" href="#">NON FICTION</a></li>
 </ul>
 
 </div>
